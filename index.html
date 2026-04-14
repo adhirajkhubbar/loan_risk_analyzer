@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Risk Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/4b8b0b0f2f.js" crossorigin="anonymous"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<h1>💰 Loan Risk Analyzer</h1>
+
+<div class="main">
+
+    <!-- FORM -->
+    <div class="card">
+
+        <h2>👤 Personal Financial Details</h2>
+
+        <div class="input-group">
+            <i class="fa-solid fa-wallet"></i>
+            <input type="number" id="income" placeholder="Monthly Income">
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-receipt"></i>
+            <input type="number" id="expenses" placeholder="Monthly Expenses">
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-credit-card"></i>
+            <input type="number" id="emi" placeholder="Existing EMI">
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-briefcase"></i>
+            <select id="job">
+                <option value="stable">Stable Job</option>
+                <option value="unstable">Unstable Job</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-chart-line"></i>
+            <select id="credit">
+                <option value="good">Good Credit</option>
+                <option value="average">Average Credit</option>
+                <option value="bad">Bad Credit</option>
+            </select>
+        </div>
+
+        <hr>
+
+        <h2>🏦 Loan Simulation</h2>
+
+        <div class="input-group">
+            <i class="fa-solid fa-money-bill"></i>
+            <input type="number" id="loanAmount" placeholder="Loan Amount">
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-percent"></i>
+            <input type="number" id="interest" placeholder="Interest Rate (%)">
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-calendar"></i>
+            <input type="number" id="tenure" placeholder="Tenure (months)">
+        </div>
+
+        <button onclick="calculateRisk()">Analyze Risk</button>
+
+    </div>
+
+    <!-- RESULT -->
+    <div class="card result-card" id="result">
+        <h2>Your Result</h2>
+        <div id="resultContent"></div>
+
+        <!-- Risk Meter -->
+        <div class="risk-meter">
+            <div id="riskBar"></div>
+        </div>
+
+        <canvas id="riskBarChart"></canvas>
+    </div>
+
+</div>
+
+<h1>📊 Analytics Dashboard</h1>
+
+<div class="dashboard">
+    <canvas id="loanChart"></canvas>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
