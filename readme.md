@@ -1,5 +1,7 @@
 # 💰 Loan Risk Analyzer
 
+🔗 Live Demo: https://adhirajkhubbar.github.io/loan_risk_analyzer/
+
 A smart fintech-style web app that analyzes loan approval risk based on financial inputs.
 
 ## 🚀 Features
